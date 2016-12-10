@@ -14,10 +14,11 @@ var ArticleSchema = new Schema({
     required:true
   },
   // this only saves one comment's ObjectId
-  comment: {
-      type: Schema.Types.ObjectId,
-      ref: 'Comment'
-  }
+  comment:
+    {
+        type: Schema.Types.ObjectId,
+        ref: 'Comment'
+    }
 });
 // Create the Article model with the ArticleSchema
 var Article = mongoose.model('Article', ArticleSchema);
